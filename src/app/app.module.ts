@@ -6,7 +6,7 @@ import {MaterialModule} from './material.module';
 import {RouterModule} from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { SliderComponent } from './slider/slider.component';
-import { AcecaComponent } from './aceca/aceca.component';
+import { AcercaComponent } from './acerca/acerca.component';
 import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.component';
 import { PoesiaComponent } from './poesia/poesia.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -18,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     NavComponent,
     SliderComponent,
-    AcecaComponent,
+    AcercaComponent,
     PreviewCuadrosComponent,
     PoesiaComponent,
     ContactoComponent,
