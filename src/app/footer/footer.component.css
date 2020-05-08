@@ -1,0 +1,21 @@
+.bg-footer {
+  background: black;
+  border: none;
+  border-radius: 0;
+}
+.footer {
+  border: none;
+  border-radius: 0;
+  height: 250px;
+  background: #eaeaea;
+}
+.cont-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-text a {
+  outline: none;
+}

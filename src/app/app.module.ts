@@ -11,6 +11,7 @@ import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.compo
 import { PoesiaComponent } from './poesia/poesia.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { ContactoComponent } from './contacto/contacto.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     AcecaComponent,
     PreviewCuadrosComponent,
     PoesiaComponent,
-    ContactoComponent
+    ContactoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
