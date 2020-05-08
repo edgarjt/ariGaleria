@@ -10,6 +10,7 @@ import { AcecaComponent } from './aceca/aceca.component';
 import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.component';
 import { PoesiaComponent } from './poesia/poesia.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     SliderComponent,
     AcecaComponent,
     PreviewCuadrosComponent,
-    PoesiaComponent
+    PoesiaComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
