@@ -5,7 +5,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .div-fluid {
   width: 100%;
   height: auto;
-  padding-top: 25px;
 }
 .bg-beige {
   background: #FAFAFA;

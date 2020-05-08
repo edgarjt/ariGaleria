@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
@@ -9,6 +8,8 @@ import { NavComponent } from './nav/nav.component';
 import { SliderComponent } from './slider/slider.component';
 import { AcecaComponent } from './aceca/aceca.component';
 import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.component';
+import { PoesiaComponent } from './poesia/poesia.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.compo
     NavComponent,
     SliderComponent,
     AcecaComponent,
-    PreviewCuadrosComponent
+    PreviewCuadrosComponent,
+    PoesiaComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
