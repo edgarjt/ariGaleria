@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './material.module';
 import {RouterModule} from '@angular/router';
 import { NavComponent } from './nav/nav.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
