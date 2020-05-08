@@ -1,0 +1,16 @@
+.btn-bar {
+  outline: none;
+  border: none;
+}
+.btn-bar:hover {
+  color: white;
+}
+.button-nav ul li a{
+  outline: none;
+}
+.bg-nav {
+  background: black;
+}
+.logo {
+  outline: none;
+}
