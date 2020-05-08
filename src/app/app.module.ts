@@ -8,13 +8,15 @@ import {RouterModule} from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 import { SliderComponent } from './slider/slider.component';
 import { AcecaComponent } from './aceca/aceca.component';
+import { PreviewCuadrosComponent } from './preview-cuadros/preview-cuadros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     SliderComponent,
-    AcecaComponent
+    AcecaComponent,
+    PreviewCuadrosComponent
   ],
   imports: [
     BrowserModule,
