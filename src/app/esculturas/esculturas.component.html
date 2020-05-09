@@ -1,3 +1,42 @@
-<div style="margin-top: 200px">
-<p>esculturas works!</p>
+<div class="w-100 div-top">
+  <div class="container pt-3">
+    <h3>Obras Ari Galeria de Arte</h3>
+
+
+    <mat-divider></mat-divider>
+    <div class="card-columns mt-3">
+      <div class="card card-cont" *ngFor="let esculturas of Esculturas">
+        <button class="btn-view">
+          <img loading="lazy" src="{{esculturas.esc_foto}}" class="card-img-top" alt="Obras">
+        </button>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="text-muted">Titulo:</span> {{esculturas.esc_nombre}}</li>
+            <li class="list-group-item"><span
+              class="text-muted">Autor:</span> {{esculturas.aut_nombre + ' ' + esculturas.aut_apellidos}}</li>
+            <li class="list-group-item"><span class="text-muted">Precio:</span> $ {{esculturas.esc_precio}}</li>
+            <li class="list-group-item">
+              <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles
+                <fa-icon [icon]="faeye"></fa-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!--Menu view-->
+        <mat-menu #menu="matMenu">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="text-muted">Año:</span> {{esculturas.esc_anio}}</li>
+            <li class="list-group-item"><span class="text-muted">Estado:</span> {{esculturas.esc_estado}}</li>
+            <li class="list-group-item"><span class="text-muted">Material:</span> {{esculturas.esc_material}}</li>
+            <li class="list-group-item"><span class="text-muted">Alto:</span> {{esculturas.esc_ancho}} CM</li>
+            <li class="list-group-item"><span class="text-muted">Ancho:</span> {{esculturas.esc_alto}} CM</li>
+          </ul>
+        </mat-menu>
+      </div>
+
+    </div>
+
+
+  </div>
 </div>

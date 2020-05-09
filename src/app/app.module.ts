@@ -24,6 +24,8 @@ import { Error404Component } from './error404/error404.component';
 
 /*Services*/
 import {ObrasService} from './service/obras.service';
+import {EsculturasService} from './service/esculturas.service';
+
 /*import { PaginatePipe } from './pipes/paginate.pipe';*/
 
 @NgModule({
@@ -53,7 +55,11 @@ import {ObrasService} from './service/obras.service';
     routing,
     HttpClientModule
   ],
-  providers: [appRoutingProviders, ObrasService],
+  providers: [
+    appRoutingProviders,
+    ObrasService,
+    EsculturasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
