@@ -1,0 +1,7 @@
+.cont-404 {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

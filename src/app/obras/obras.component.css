@@ -1,0 +1,19 @@
+.btn-view {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  height: auto;
+}
+.btn-view img{
+  width: 100%;
+  max-height: 330px;
+  min-height: 330px;
+  object-fit: cover;
+}
+.card-cont {
+  height: 580px;
+}

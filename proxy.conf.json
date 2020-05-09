@@ -1,0 +1,7 @@
+{
+  "/galeriaBack/public/*": {
+    "target": "https://arigaleriadearte.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

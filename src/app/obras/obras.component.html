@@ -1,4 +1,50 @@
-<div style="margin-top: 200px">
-  <p>obras works!</p>
+<div class="w-100 div-top">
+  <div class="container pt-3">
+    <h3>Obras Ari Galeria de Arte</h3>
+
+
+    <mat-divider></mat-divider>
+    <!--    <mat-paginator [length]="118"
+                       [pageSize]="page_size"
+                       [pageSizeOptions]="pageSizeOptions"
+                       (page)="handlePage($event)"
+                       showFirstLastButtons>
+        </mat-paginator>-->
+    <div class="card-columns mt-3">
+      <!--<div class="card card-cont" *ngFor="let obras of Obras | paginate:page_size:page_number">-->
+      <div class="card card-cont" *ngFor="let obras of Obras">
+        <button class="btn-view">
+          <img loading="lazy" src="{{obras.obr_foto}}" class="card-img-top" alt="Obras">
+        </button>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="text-muted">Titulo:</span> {{obras.obr_nombre}}</li>
+            <li class="list-group-item"><span
+              class="text-muted">Autor:</span> {{obras.aut_nombre + ' ' + obras.aut_apellidos}}</li>
+            <li class="list-group-item"><span class="text-muted">Precio:</span> $ {{obras.obr_precio}}</li>
+            <li class="list-group-item">
+              <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles
+                <fa-icon [icon]="faeye"></fa-icon>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!--Menu view-->
+        <mat-menu #menu="matMenu">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span class="text-muted">Año:</span> {{obras.obr_anio}}</li>
+            <li class="list-group-item"><span class="text-muted">Estado:</span> {{obras.obr_estado}}</li>
+            <li class="list-group-item"><span class="text-muted">Tecnica:</span> {{obras.obr_tecnica}}</li>
+            <li class="list-group-item"><span class="text-muted">Alto:</span> {{obras.obr_alto}} CM</li>
+            <li class="list-group-item"><span class="text-muted">Ancho:</span> {{obras.obr_ancho}} CM</li>
+          </ul>
+        </mat-menu>
+      </div>
+
+    </div>
+
+
+  </div>
 </div>
 

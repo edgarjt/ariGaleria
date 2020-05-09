@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing, appRoutingProviders} from './app.routing';
+import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,10 @@ import { ProductosComponent } from './productos/productos.component';
 import { HomeComponent } from './home/home.component';
 import { Error404Component } from './error404/error404.component';
 
+/*Services*/
+import {ObrasService} from './service/obras.service';
+/*import { PaginatePipe } from './pipes/paginate.pipe';*/
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,8 @@ import { Error404Component } from './error404/error404.component';
     NoticiasComponent,
     ProductosComponent,
     HomeComponent,
-    Error404Component
+    Error404Component,
+/*    PaginatePipe*/
   ],
   imports: [
     BrowserModule,
@@ -44,9 +50,10 @@ import { Error404Component } from './error404/error404.component';
     MaterialModule,
     RouterModule,
     FontAwesomeModule,
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, ObrasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

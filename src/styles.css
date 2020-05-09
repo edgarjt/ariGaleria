@@ -16,3 +16,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cont-card img {
   height: 270px;
 }
+.div-top {
+  margin-top: 60px;
+}
