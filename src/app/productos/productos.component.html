@@ -1,4 +1,24 @@
-<div style="margin-top: 200px">
-<h1>Productos</h1>
+<div class="w-100 div-top">
+  <div class="container pt-3">
+    <h3>Productos</h3>
 
+
+    <mat-divider></mat-divider>
+
+    <div class="card-columns mt-3">
+      <div class="card card-cont" *ngFor="let productos of ProductService">
+        <img class="card-img-top" src="{{productos.pro_foto}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{productos.pro_titulo}}</h5>
+          <p class="card-text">Precio: ${{productos.pro_precio}} </p>
+          <p><a href="https://api.whatsapp.com/send?phone=529934341808&amp;text=Estoy%20interesado%20en {{productos.pro_descripcion}}." target="_blank"><img src="../../assets/icons/brands.svg" alt="wharsapp" width="35px"></a></p>
+
+          <button class="btn btn-primary">Descripcion</button>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </div>

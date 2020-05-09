@@ -27,6 +27,7 @@ import { AutoresComponent } from './autores/autores.component';
 import {ObrasService} from './service/obras.service';
 import {EsculturasService} from './service/esculturas.service';
 import {AutoresService} from './service/autores.service';
+import {ProductoService} from './service/producto.service';
 
 /*import { PaginatePipe } from './pipes/paginate.pipe';*/
 
@@ -62,7 +63,8 @@ import {AutoresService} from './service/autores.service';
     appRoutingProviders,
     ObrasService,
     EsculturasService,
-    AutoresService
+    AutoresService,
+    ProductoService
   ],
   bootstrap: [AppComponent]
 })
