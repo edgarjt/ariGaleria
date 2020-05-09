@@ -1,4 +1,10 @@
-<div class="w-100 div-top">
+<div class="w-100 vh-100 cont-load" *ngIf="!Obras">
+  <div class="text-center">
+    <img src="../../assets/icons/load.gif" alt="load" width="50%">
+  </div>
+</div>
+
+<div class="w-100 div-top" *ngIf="Obras">
   <div class="container pt-3">
     <h3>Obras Ari Galeria de Arte</h3>
 
