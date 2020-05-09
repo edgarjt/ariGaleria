@@ -21,10 +21,12 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { ProductosComponent } from './productos/productos.component';
 import { HomeComponent } from './home/home.component';
 import { Error404Component } from './error404/error404.component';
+import { AutoresComponent } from './autores/autores.component';
 
 /*Services*/
 import {ObrasService} from './service/obras.service';
 import {EsculturasService} from './service/esculturas.service';
+import {AutoresService} from './service/autores.service';
 
 /*import { PaginatePipe } from './pipes/paginate.pipe';*/
 
@@ -44,6 +46,7 @@ import {EsculturasService} from './service/esculturas.service';
     ProductosComponent,
     HomeComponent,
     Error404Component,
+    AutoresComponent,
 /*    PaginatePipe*/
   ],
   imports: [
@@ -58,7 +61,8 @@ import {EsculturasService} from './service/esculturas.service';
   providers: [
     appRoutingProviders,
     ObrasService,
-    EsculturasService
+    EsculturasService,
+    AutoresService
   ],
   bootstrap: [AppComponent]
 })

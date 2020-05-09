@@ -1,0 +1,45 @@
+<div class="w-100 vh-100 cont-load" *ngIf="!AutoresResponse">
+  <div class="text-center">
+    <img src="../../assets/icons/load.gif" alt="load" width="50%">
+  </div>
+</div>
+
+
+<div class="w-100 h-auto div-top" *ngIf="AutoresResponse">
+  <div class="w-100 div-top">
+    <div class="container pt-3">
+      <h3>Autores</h3>
+
+      <mat-divider></mat-divider>
+
+      <div class="card-columns mt-3">
+        <div class="card cart-cont" *ngFor="let autores of AutoresResponse">
+          <div class="card-header text-center header-card">
+            <img src="{{autores.aut_foto}}" alt="" class="rounded-img">
+          </div>
+
+          <div class="card-body text-center">
+            <h5 class="card-title text-center">{{autores.aut_nombre}}</h5>
+            <mat-divider class="mt-4 pt-4"></mat-divider>
+            <fa-icon [icon]="faBorderAll1"></fa-icon>
+
+            <p class="card-text text-justify pb-4 test"><!--{{autores.aut_templanza}}--></p>
+
+            <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary btn-block">Ver templanza</button>
+
+            <mat-menu #menu="matMenu">
+              <ul class="list-group list-group-flush">
+                <div class="container-fluid">
+                  <h6>Templanza</h6>
+                  <p class="text-justify">{{autores.aut_templanza}}</p>
+                </div>
+
+              </ul>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

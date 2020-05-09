@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faGifts} from '@fortawesome/free-solid-svg-icons';
+import {faGifts, faDiceD20} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-poesia',
@@ -7,7 +7,7 @@ import {faGifts} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./poesia.component.css']
 })
 export class PoesiaComponent implements OnInit {
-  fagif = faGifts;
+  fagif = faDiceD20;
 
   constructor() { }
 

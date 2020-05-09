@@ -8,13 +8,14 @@ import {EsculturasComponent} from './esculturas/esculturas.component';
 import {NoticiasComponent} from './noticias/noticias.component';
 import {ProductosComponent} from './productos/productos.component';
 import {Error404Component} from './error404/error404.component';
+import {AutoresComponent} from './autores/autores.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'obras', component: ObrasComponent},
   {path: 'esculturas', component: EsculturasComponent},
-  {path: 'noticias', component: NoticiasComponent},
+  {path: 'autores', component: AutoresComponent},
   {path: 'productos', component: ProductosComponent},
   {path: '**', component: Error404Component}
 ];
