@@ -19,3 +19,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .div-top {
   margin-top: 60px;
 }
+.preview_img {
+  height: 90vh;
+}
+@media (max-width: 570px) {
+  .preview_img {
+    height: 300px;
+  }
+}

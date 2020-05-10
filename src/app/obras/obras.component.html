@@ -18,15 +18,14 @@
         </mat-paginator>-->
     <div class="card-columns mt-3">
       <!--<div class="card card-cont" *ngFor="let obras of Obras | paginate:page_size:page_number">-->
-      <div class="card card-cont" *ngFor="let obras of Obras">
-        <a class="btn-view" href="#">
+      <div class="card card-cont" *ngFor="let obras of Obras; index as i">
+        <a class="btn-view" data-toggle="modal">
           <img loading="lazy" src="{{obras.obr_foto}}" class="card-img-top" alt="Obras">
         </a>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><span class="text-muted">Titulo:</span> {{obras.obr_nombre}}</li>
-            <li class="list-group-item"><span
-              class="text-muted">Autor:</span> {{obras.aut_nombre + ' ' + obras.aut_apellidos}}</li>
+            <li class="list-group-item"><span class="text-muted">Autor:</span> {{obras.aut_nombre + ' ' + obras.aut_apellidos}}</li>
             <li class="list-group-item"><span class="text-muted">Precio:</span> $ {{obras.obr_precio}}</li>
             <li class="list-group-item">
               <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles
@@ -35,6 +34,15 @@
             </li>
           </ul>
         </div>
+
+<!--        &lt;!&ndash; Modal &ndash;&gt;
+        <div class="modal fade bd-example-modal-xl" id="cuadro{{i}}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <img src="{{obras.obr_foto}}" alt="" class="preview_img">
+            </div>
+          </div>
+        </div>-->
 
         <!--Menu view-->
         <mat-menu #menu="matMenu">
@@ -49,8 +57,6 @@
       </div>
 
     </div>
-
-
   </div>
 </div>
 
