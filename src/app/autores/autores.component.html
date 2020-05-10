@@ -1,11 +1,11 @@
 <div class="w-100 vh-100 cont-load" *ngIf="!AutoresResponse">
   <div class="text-center">
-    <img src="../../assets/icons/load.gif" alt="load" width="50%">
+    <img src="assets/icons/load.gif" alt="load" width="50%">
   </div>
 </div>
 
 
-<div class="w-100 h-auto div-top" *ngIf="AutoresResponse">
+<div class="w-100 h-auto div-top bg-beige" *ngIf="AutoresResponse">
   <div class="w-100 div-top">
     <div class="container pt-3">
       <h3>Autores</h3>
@@ -25,7 +25,7 @@
 
             <p class="card-text text-justify pb-4 test"><!--{{autores.aut_templanza}}--></p>
 
-            <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary btn-block">Ver templanza</button>
+            <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary btn-block">Templanza</button>
 
             <mat-menu #menu="matMenu">
               <ul class="list-group list-group-flush">

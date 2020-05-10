@@ -13,6 +13,7 @@ export class ProductosComponent implements OnInit {
 
   ngOnInit() {
     this.productoService.getOAutores().subscribe(response => {
+      console.log(response);
       this.ProductService = response;
     }, error => {
       console.log(error);

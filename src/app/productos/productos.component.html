@@ -1,7 +1,13 @@
-<div class="w-100 div-top">
+<div class="w-100 vh-100 cont-load" *ngIf="!ProductService">
+  <div class="text-center">
+    <img src="assets/icons/load.gif" alt="load" width="50%">
+  </div>
+</div>
+
+
+<div class="w-100 h-auto div-top bg-beige" *ngIf="ProductService">
   <div class="container pt-3">
     <h3>Productos</h3>
-
 
     <mat-divider></mat-divider>
 
@@ -11,10 +17,17 @@
         <div class="card-body">
           <h5 class="card-title">{{productos.pro_titulo}}</h5>
           <p class="card-text">Precio: ${{productos.pro_precio}} </p>
-          <p><a href="https://api.whatsapp.com/send?phone=529934341808&amp;text=Estoy%20interesado%20en {{productos.pro_descripcion}}." target="_blank"><img src="../../assets/icons/brands.svg" alt="wharsapp" width="35px"></a></p>
+          <p><a href="https://api.whatsapp.com/send?phone=529934341808&amp;text=Estoy%20interesado%20en {{productos.pro_descripcion}}." target="_blank"><img src="assets/icons/brands.svg" alt="whatsapp" width="35px"></a></p>
 
-          <button class="btn btn-primary">Descripcion</button>
+          <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles</button>
 
+          <mat-menu #menu="matMenu">
+            <div class="container-fluid">
+              <h5>Descripción</h5>
+              <mat-divider></mat-divider>
+              <p class="text-justify">{{productos.pro_descripcion}}</p>
+            </div>
+          </mat-menu>
         </div>
       </div>
     </div>

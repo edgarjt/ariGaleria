@@ -1,10 +1,10 @@
 <div class="w-100 vh-100 cont-load" *ngIf="!Obras">
   <div class="text-center">
-    <img src="../../assets/icons/load.gif" alt="load" width="50%">
+    <img src="assets/icons/load.gif" alt="load" width="50%">
   </div>
 </div>
 
-<div class="w-100 div-top" *ngIf="Obras">
+<div class="w-100 div-top bg-beige" *ngIf="Obras">
   <div class="container pt-3">
     <h3>Obras Ari Galeria de Arte</h3>
 
@@ -19,9 +19,9 @@
     <div class="card-columns mt-3">
       <!--<div class="card card-cont" *ngFor="let obras of Obras | paginate:page_size:page_number">-->
       <div class="card card-cont" *ngFor="let obras of Obras">
-        <button class="btn-view">
+        <a class="btn-view" href="#">
           <img loading="lazy" src="{{obras.obr_foto}}" class="card-img-top" alt="Obras">
-        </button>
+        </a>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><span class="text-muted">Titulo:</span> {{obras.obr_nombre}}</li>

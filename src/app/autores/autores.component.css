@@ -24,7 +24,7 @@
   width: 150px;
   height: 150px;
   border-style:solid;
-  border-color:white;
+  border-color: white;
 }
 .degrad-card {
   width: 100%;
@@ -33,5 +33,5 @@
   padding: 0;
 }
 .header-card {
-  background-image: linear-gradient(to bottom right, red, blue);
+  background-image: linear-gradient(to top left, #1f9bfb, #09f5ac);
 }
