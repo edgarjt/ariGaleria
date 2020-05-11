@@ -10,16 +10,16 @@
 
 
     <mat-divider></mat-divider>
-    <!--    <mat-paginator [length]="118"
+<!--        <mat-paginator [length]="118"
                        [pageSize]="page_size"
                        [pageSizeOptions]="pageSizeOptions"
                        (page)="handlePage($event)"
                        showFirstLastButtons>
         </mat-paginator>-->
     <div class="card-columns mt-3">
-      <!--<div class="card card-cont" *ngFor="let obras of Obras | paginate:page_size:page_number">-->
+<!--      <div class="card card-cont" *ngFor="let obras of Obras | paginate:page_size:page_number">-->
       <div class="card card-cont" *ngFor="let obras of Obras; index as i">
-        <a class="btn-view" data-toggle="modal">
+        <a class="btn-view" data-toggle="modal" href="#cuadro{{i}}">
           <img loading="lazy" src="{{obras.obr_foto}}" class="card-img-top" alt="Obras">
         </a>
         <div class="card-body">
@@ -34,15 +34,14 @@
             </li>
           </ul>
         </div>
-
-<!--        &lt;!&ndash; Modal &ndash;&gt;
-        <div class="modal fade bd-example-modal-xl" id="cuadro{{i}}" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-            <div class="modal-content">
-                <img src="{{obras.obr_foto}}" alt="" class="preview_img">
+        <!--Modal-->
+        <div class="modal fade" id="cuadro{{i}}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark">
+                <img loading="lazy" src="{{obras.obr_foto}}" alt="" class="preview_img" style="width:auto">
             </div>
           </div>
-        </div>-->
+        </div>
 
         <!--Menu view-->
         <mat-menu #menu="matMenu">

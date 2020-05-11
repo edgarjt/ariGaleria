@@ -11,10 +11,10 @@
 
     <mat-divider></mat-divider>
     <div class="card-columns mt-3">
-      <div class="card card-cont" *ngFor="let esculturas of Esculturas">
-        <button class="btn-view">
+      <div class="card card-cont" *ngFor="let esculturas of Esculturas; index as i">
+        <a class="btn-view" data-toggle="modal" href="#escultura{{i}}">
           <img loading="lazy" src="{{esculturas.esc_foto}}" class="card-img-top" alt="Obras">
-        </button>
+        </a>
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item"><span class="text-muted">Titulo:</span> {{esculturas.esc_nombre}}</li>
@@ -27,6 +27,15 @@
               </button>
             </li>
           </ul>
+        </div>
+
+        <!--Modal-->
+        <div class="modal fade" id="escultura{{i}}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content bg-dark">
+              <img loading="lazy" src="{{esculturas.esc_foto}}" alt="" class="preview_img cover img-modal" style="width:auto">
+            </div>
+          </div>
         </div>
 
         <!--Menu view-->
