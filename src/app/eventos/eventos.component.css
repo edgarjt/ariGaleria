@@ -1,5 +1,6 @@
 .card-cont {
   min-height: 500px;
+  background: rgba(253,254,254,0.3);
 }
 .bg-event {
   background-image: url('/assets/img/event.jpg');
@@ -8,5 +9,8 @@
   background-size: cover;
 }
 .card-event {
-  background: #DDDDDD;
+  background: #EEEEEE;
+}
+.text-marino {
+  color: #001633;
 }

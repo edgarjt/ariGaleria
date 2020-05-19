@@ -6,13 +6,15 @@
         <div class="row p-2">
           <div class="col-sm-12 col-md-12 col-lg-6">
             <p class="font-weight-bold text-uppercase">{{eventos.eve_nombre}}</p>
-            <p class="text-justify text-danger">{{eventos.eve_descripcion}}</p>
+            <p class="text-justify text-marino">{{eventos.eve_descripcion}}</p>
           </div>
           <div class="col-sm -12 col-md-4 col-lg-4">
             <p>Fecha: {{eventos.eve_fecha}}</p>
             <p>Hora: {{eventos.eve_horario}}</p>
           </div>
-          <div class="col-sm-12 col-md12 col-lg-2"><button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button></div>
+          <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
+            <button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>
+          </div>
         </div>
       </div>
     </mat-card>
