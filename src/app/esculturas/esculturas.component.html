@@ -22,9 +22,17 @@
               class="text-muted">Autor:</span> {{esculturas.aut_nombre + ' ' + esculturas.aut_apellidos}}</li>
             <li class="list-group-item"><span class="text-muted">Precio:</span> $ {{esculturas.esc_precio}}</li>
             <li class="list-group-item">
-              <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles
-                <fa-icon [icon]="faeye"></fa-icon>
-              </button>
+              <div class="row">
+                <div class="col-8">
+                  <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary">Detalles
+                    <fa-icon [icon]="faeye"></fa-icon>
+                  </button>
+                </div>
+                <div class="col-4 text-right">
+                  <a class="mr-auto" href="https://api.whatsapp.com/send?phone=529934341808&amp;text=Estoy%20interesado%20en la escultura {{esculturas.esc_nombre}} del autor {{esculturas.aut_nombre + ' ' + esculturas.aut_apellidos}}." target="_blank"><img src="assets/icons/brands.svg" alt="whatsapp" width="35px"></a>
+                </div>
+              </div>
+
             </li>
           </ul>
         </div>

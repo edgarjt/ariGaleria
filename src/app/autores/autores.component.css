@@ -24,7 +24,7 @@
   width: 150px;
   height: 150px;
   border-style:solid;
-  border-color: white;
+  border-color: #212121;
 }
 .degrad-card {
   width: 100%;
@@ -33,5 +33,17 @@
   padding: 0;
 }
 .header-card {
-  background-image: linear-gradient(to top left, #1f9bfb, #09f5ac);
+  /*background-image: linear-gradient(to top left, #1f9bfb, #09f5ac);*/
+  background: white;
+}
+.btn-color {
+  background: #4b4b4b;
+  color: #FFFFFF;
+}
+.btn-color:hover {
+  background: #757575;
+  transition: all 1s;
+}
+.cart-cont {
+  background: #212121;
 }

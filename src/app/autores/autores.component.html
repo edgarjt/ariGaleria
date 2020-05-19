@@ -19,13 +19,21 @@
           </div>
 
           <div class="card-body text-center">
-            <h5 class="card-title text-center">{{autores.aut_nombre}}</h5>
+            <h5 class="card-title text-center text-white">{{autores.aut_nombre}}</h5>
             <mat-divider class="mt-4 pt-4"></mat-divider>
-            <fa-icon [icon]="faBorderAll1"></fa-icon>
+            <a href="#" rel="nofollow noopener noreferrer" target="_blank" class="m-2">
+              <img loading="lazy" src="assets/icons/logoface.svg" alt="" width="30">
+            </a>
+
+            <a href="#" rel="nofollow noopener noreferrer" target="_blank" class="m-2">
+              <img loading="lazy" src="assets/icons/logotwitter.svg" alt="" width="30" class="text-danger">
+            </a>
+<!--            <fa-icon class="text-white m-2" [icon]="faBorderAll1"></fa-icon>
+            <fa-icon class="text-white" [icon]="faBorderAll1"></fa-icon>-->
 
             <p class="card-text text-justify pb-4 test"><!--{{autores.aut_templanza}}--></p>
 
-            <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-primary btn-block">Templanza</button>
+            <button [matMenuTriggerFor]="menu" class="btn btn-sm btn-color btn-block">Templanza</button>
 
             <mat-menu #menu="matMenu">
               <ul class="list-group list-group-flush">
