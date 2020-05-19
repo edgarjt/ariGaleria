@@ -22,12 +22,14 @@ import { ProductosComponent } from './productos/productos.component';
 import { HomeComponent } from './home/home.component';
 import { Error404Component } from './error404/error404.component';
 import { AutoresComponent } from './autores/autores.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 /*Services*/
 import {ObrasService} from './service/obras.service';
 import {EsculturasService} from './service/esculturas.service';
 import {AutoresService} from './service/autores.service';
 import {ProductoService} from './service/producto.service';
+import {EventosService} from './service/eventos.service';
 
 /*import { PaginatePipe } from './pipes/paginate.pipe';*/
 
@@ -48,6 +50,7 @@ import {ProductoService} from './service/producto.service';
     HomeComponent,
     Error404Component,
     AutoresComponent,
+    EventosComponent,
 /*    PaginatePipe*/
   ],
   imports: [
@@ -64,7 +67,8 @@ import {ProductoService} from './service/producto.service';
     ObrasService,
     EsculturasService,
     AutoresService,
-    ProductoService
+    ProductoService,
+    EventosService
   ],
   bootstrap: [AppComponent]
 })

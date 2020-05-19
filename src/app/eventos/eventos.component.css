@@ -1,0 +1,12 @@
+.card-cont {
+  min-height: 500px;
+}
+.bg-event {
+  background-image: url('/assets/img/event.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-event {
+  background: #DDDDDD;
+}

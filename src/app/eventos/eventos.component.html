@@ -1,0 +1,20 @@
+<section class="div-fluid bg-event pt-5 pb-5" *ngIf="EventService">
+  <div class="container">
+    <h3 class="text-white">Eventos</h3>
+    <mat-card class="card-cont">
+      <div class="card-event mb-4" *ngFor="let eventos of EventService">
+        <div class="row p-2">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <p class="font-weight-bold text-uppercase">{{eventos.eve_nombre}}</p>
+            <p class="text-justify">{{eventos.eve_descripcion}}</p>
+          </div>
+          <div class="col-sm -12 col-md-4 col-lg-4">
+            <p>Fecha: {{eventos.eve_fecha}}</p>
+            <p>Hora: {{eventos.eve_horario}}</p>
+          </div>
+          <div class="col-sm-12 col-md12 col-lg-2"><button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button></div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>
