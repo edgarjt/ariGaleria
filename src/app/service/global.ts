@@ -1,4 +1,4 @@
-export var Global = {
-  url: 'galeriaBack/public/'
+export const Global = {
+  url: 'http://arigaleriadearte.com/galeriaBack/public/'
 };
 

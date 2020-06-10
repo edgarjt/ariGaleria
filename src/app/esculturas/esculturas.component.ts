@@ -18,7 +18,7 @@ export class EsculturasComponent implements OnInit {
   ngOnInit() {
     this.esculturaServicios.getEsculturas().subscribe(response => {
       this.Esculturas = response;
-      console.log(response);
+
     }, error => {
       console.log(error);
     });

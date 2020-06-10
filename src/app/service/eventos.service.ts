@@ -22,6 +22,21 @@ export class EventosService {
 
   getEventos(): Observable<any> {
 
-    return this.http.get(this.url + 'ultimoseventos' ,{ headers: httpOptions.headers });
+    return this.http.get(this.url + 'eventos' ,{ headers: httpOptions.headers });
+  }
+
+  getPlatica(): Observable<any> {
+
+    return this.http.get(this.url + 'platicas' ,{ headers: httpOptions.headers });
+  }
+
+  getTaller(): Observable<any> {
+
+    return this.http.get(this.url + 'talleres' ,{ headers: httpOptions.headers });
+  }
+
+  getExpo(): Observable<any> {
+
+    return this.http.get(this.url + 'expociciones' ,{ headers: httpOptions.headers });
   }
 }

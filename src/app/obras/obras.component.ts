@@ -24,7 +24,7 @@ export class ObrasComponent implements OnInit {
   ngOnInit() {
     this.obrasServicios.getObras().subscribe(response => {
       this.Obras = response;
-      console.log(response);
+
     }, error => {
       console.log(error);
     });

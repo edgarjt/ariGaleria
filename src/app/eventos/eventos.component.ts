@@ -8,15 +8,51 @@ import {EventosService} from '../service/eventos.service';
 })
 export class EventosComponent implements OnInit {
   EventService: any;
+  EventPlatica: any;
+  EventTaller: any;
+  EventExpo: any;
 
   constructor(private ServiceEvent: EventosService) { }
 
   ngOnInit() {
     this.ServiceEvent.getEventos().subscribe(response => {
+      if (response.length === 0) {
+        return this.EventService = false;
+      }
       this.EventService = response;
-      console.log(response);
+
     }, error => {
-      console.log(error);
+      console.log(error.error);
+    });
+
+    this.ServiceEvent.getPlatica().subscribe(response => {
+      if (response.length === 0) {
+        return this.EventPlatica = false;
+      }
+      this.EventPlatica = response;
+
+    }, error => {
+      console.log(error.error);
+    });
+
+    this.ServiceEvent.getTaller().subscribe(response => {
+      if (response.length === 0) {
+        return this.EventTaller = false;
+      }
+      this.EventTaller = response;
+
+    }, error => {
+      console.log(error.error);
+    });
+
+    this.ServiceEvent.getExpo().subscribe(response => {
+      if (response.length === 0) {
+        return this.EventExpo = false;
+      }
+      this.EventExpo = response;
+
+    }, error => {
+      console.log(error.error);
     });
   }
 

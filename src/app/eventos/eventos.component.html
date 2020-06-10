@@ -1,22 +1,95 @@
 <section class="div-fluid bg-event pt-5 pb-5" *ngIf="EventService">
   <div class="container">
-    <h3 class="text-white">Eventos</h3>
     <mat-card class="card-cont">
-      <div class="card-event mb-4" *ngFor="let eventos of EventService">
-        <div class="row p-2">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <p class="font-weight-bold text-uppercase">{{eventos.eve_nombre}}</p>
-            <p class="text-justify text-marino">{{eventos.eve_descripcion}}</p>
-          </div>
-          <div class="col-sm -12 col-md-4 col-lg-4">
-            <p>Fecha: {{eventos.eve_fecha}}</p>
-            <p>Hora: {{eventos.eve_horario}}</p>
-          </div>
-          <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
-            <button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>
+    <mat-tab-group mat-stretch-tabs >
+
+      <mat-tab label="Eventos">
+        <p class="mt-3" *ngIf="!EventService">No hay eventos disponibles en este momento.</p>
+        <div class="card-event mb-4 mt-4" *ngFor="let eventos of EventService">
+          <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <p class="font-weight-bold text-uppercase">{{eventos.eve_nombre}}</p>
+              <p class="text-justify text-marino">{{eventos.eve_descripcion}}</p>
+            </div>
+            <div class="col-sm -12 col-md-4 col-lg-4">
+              <p>Fecha: {{eventos.eve_fecha}}</p>
+              <p>Hora: {{eventos.eve_horario}}</p>
+            </div>
+            <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
+              <!--<button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>-->
+            </div>
+            </div>
           </div>
         </div>
-      </div>
+      </mat-tab>
+
+      <mat-tab label="Pláticas">
+        <p class="mt-3" *ngIf="!EventPlatica">No hay pláticas disponibles en este momento.</p>
+        <div class="card-event mb-4 mt-4" *ngFor="let platica of EventPlatica">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <p class="font-weight-bold text-uppercase">{{platica.eve_nombre}}</p>
+                <p class="text-justify text-marino">{{platica.eve_descripcion}}</p>
+              </div>
+              <div class="col-sm -12 col-md-4 col-lg-4">
+                <p>Fecha: {{platica.eve_fecha}}</p>
+                <p>Hora: {{platica.eve_horario}}</p>
+              </div>
+              <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
+                <!--<button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Talleres">
+        <p class="mt-3" *ngIf="!EventTaller">No hay talleres disponibles en este momento.</p>
+        <div class="card-event mb-4 mt-4" *ngFor="let taller of EventTaller">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <p class="font-weight-bold text-uppercase">{{taller.eve_nombre}}</p>
+                <p class="text-justify text-marino">{{taller.eve_descripcion}}</p>
+              </div>
+              <div class="col-sm -12 col-md-4 col-lg-4">
+                <p>Fecha: {{taller.eve_fecha}}</p>
+                <p>Hora: {{taller.eve_horario}}</p>
+              </div>
+              <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
+                <!--<button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Exposiciones">
+        <p class="mt-3" *ngIf="!EventExpo">No hay exposiciones disponibles en este momento.</p>
+        <div class="card-event mb-4 mt-4" *ngFor="let expo of EventExpo">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-6">
+                <p class="font-weight-bold text-uppercase">{{expo.eve_nombre}}</p>
+                <p class="text-justify text-marino">{{expo.eve_descripcion}}</p>
+              </div>
+              <div class="col-sm -12 col-md-4 col-lg-4">
+                <p>Fecha: {{expo.eve_fecha}}</p>
+                <p>Hora: {{expo.eve_horario}}</p>
+              </div>
+              <div class="col-sm-12 col-md12 col-lg-2 d-flex align-items-center">
+                <!--<button class="btn btn-sm btn-primary shadow-sm rounded-pill font-weight-bold">Me interesa</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+
     </mat-card>
+
   </div>
 </section>

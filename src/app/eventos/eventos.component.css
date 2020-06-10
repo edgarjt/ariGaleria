@@ -1,9 +1,11 @@
 .card-cont {
   min-height: 500px;
-  background: rgba(253,254,254,0.3);
+  height: auto;
+  background: rgba(255,255,255,0.8);
+/*  background: rgba(255,255,255,255);*/
 }
 .bg-event {
-  background-image: url('../../assets/img/event.jpg');
+  background-image: url('../../assets/img/event6.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
