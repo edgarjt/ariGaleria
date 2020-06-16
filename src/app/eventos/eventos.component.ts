@@ -16,6 +16,7 @@ export class EventosComponent implements OnInit {
 
   ngOnInit() {
     this.ServiceEvent.getEventos().subscribe(response => {
+      console.log(response);
       if (response.length === 0) {
         return this.EventService = false;
       }
@@ -26,6 +27,7 @@ export class EventosComponent implements OnInit {
     });
 
     this.ServiceEvent.getPlatica().subscribe(response => {
+      console.log(response);
       if (response.length === 0) {
         return this.EventPlatica = false;
       }
@@ -36,6 +38,7 @@ export class EventosComponent implements OnInit {
     });
 
     this.ServiceEvent.getTaller().subscribe(response => {
+      console.log(response);
       if (response.length === 0) {
         return this.EventTaller = false;
       }
@@ -46,6 +49,7 @@ export class EventosComponent implements OnInit {
     });
 
     this.ServiceEvent.getExpo().subscribe(response => {
+      console.log(response);
       if (response.length === 0) {
         return this.EventExpo = false;
       }
