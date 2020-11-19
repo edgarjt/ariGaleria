@@ -19,6 +19,7 @@ export class EventosComponent implements OnInit {
       console.log(response);
       if (response.length === 0) {
         return this.EventService = false;
+        console.log('Me estoy retornando');
       }
       this.EventService = response;
 
